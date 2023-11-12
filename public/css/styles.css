@@ -1,0 +1,135 @@
+/* Estilos generales */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/coast.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.ring{
+    border: 2px solid transparent;
+    height: 80vh;
+    width: 60vw;
+    position: relative;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.pikachu, .marowak {
+    height: 290px;
+    width: 350px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+}
+
+
+.pikachu{
+    right: 20%;    
+    z-index: 1;
+}
+.marowak{
+    left: 10px;
+} 
+
+
+.pikachu__image, .marowak__image {
+    display: block;
+    filter: drop-shadow(5px 5px 5px #222);
+    width: 300px;
+    transition: all 1s;
+}
+
+
+.pikachu__image:hover {
+    filter: drop-shadow(0px 0px 40px yellow);
+}
+
+.pikachu:active {
+    background-image: url('/img/rayos.png');
+    background-position: center;
+    background-size: cover;
+    animation: ataquerapido 2s 1;
+}
+
+
+@keyframes ataquerapido {
+    0% {
+        box-shadow: 0 0 60px transparent ; 
+        transform: scale(1);
+    }
+
+    80% {
+        box-shadow: 0 0 60px yellow;      
+        transform: scale(1.2) translate(-30px);
+    }
+
+    90% {
+        box-shadow: 0 0 60px yellow;      
+        transform: scale(1.2) translate(-14vw, -60px);
+    }
+
+    95% {
+        box-shadow: 0 0 60px yellow;      
+        transform: scale(1.2) translate(-18vw, 60px);
+    }
+
+    100% {
+        box-shadow: 0 0 80px rgb(255, 174, 0);      
+        transform: scale(1.2) translate(-25vw);
+    }
+}
+
+
+/* Darle vida a Marowak!! */
+
+.marowak{
+    /* Aquí tu código css*/
+}
+
+.marowak__image{
+    /* Aquí tu código css*/
+}
+
+@keyframes infortunio {
+    /* Aquí tu código css*/
+}
+
+
+/* -----------------UNA POSIBLE RESOLUCIÓN -------------*/
+
+/* .marowak__image:hover{
+    filter: drop-shadow(0 0 40px blue);
+}
+
+.marowak:active{
+background-image: url('/img/infortunio.png');
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+animation: infortunio 3s 1;
+}
+
+@keyframes infortunio {
+    0%{
+        box-shadow: 1vw -10px 10px transparent;
+        transform: scale(1);
+    }
+    70%{
+        box-shadow: 22vw -10px 80px blueviolet;
+        transform: scale(1.2) translateY(-30px);
+    }
+    100%{
+        box-shadow: 22vw -10px 100px rgb(19, 7, 31) ;
+        transform: scale(1.3) translate(0px, -30px);
+    }
+    
+} */
